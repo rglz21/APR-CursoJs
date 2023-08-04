@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion del dom</title>
+</head>
+<style>
+    :root {
+        --yellow-color:#F7DF1E;
+        --dark-color:#222;
+    }
+
+    img{
+        width: 300px;
+    }
+
+    .cards{
+        border:thin solid var(--dark-color);
+        padding: 1rem;
+    }
+
+    .card{
+        display:inline-block;
+        background-color: var(--dark-color);
+        color: var(--yellow-color);
+    }
+
+    .card figcaption{
+    padding: 1rem;
+    }
+
+    .rotate-45{
+        transform: rotate(45deg);
+    }
+
+    .rotate-135{
+        transform: rotate(135deg);
+    }
+
+    .opacity-80{
+        opacity: .8;
+    }
+
+    .sepia{
+        filter: sepia(1);
+    }
+
+</style>
+<body>
+    <hr>
+    <h3>Manejo del DOM</h3>
+    <p id="que-es"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ea autem alias amet, delectus
+        numquam. Atque provident libero, obcaecati odit optio a, aut assumenda deleniti amet quaerat commodi fuga eius.
+    </p>
+    <nav id="menu">
+     <ul>
+        <li><a href="#">Seccion 1</a></li>
+        <li><a href="#">Seccion 2</a></li>
+        <li><a href="#">Seccion 3</a></li>
+        <li><a href="#">Seccion 4</a></li>
+        <li><a href="#">Seccion 5</a></li>
+     </ul>
+    </nav>
+
+<input type="text" name="nombre" placeholder="Nombre">
+<a class="link-dom" href="index.html" data-description="Document Object Model">DOM</a>
+
+<section class="cards">
+    <figure class="card">
+        <img src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg" alt="">
+        <figcaption>tech</figcaption>
+    </figure>
+    <figure class="card">
+        <img src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720" alt="">
+        <figcaption>animals</figcaption>
+    </figure>
+    <figure class="card">
+        <img src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720" alt="">
+        <figcaption>people</figcaption>
+    </figure>
+    <figure class="card">
+        <img src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720" alt="">
+        <figcaption>arch</figcaption>
+    </figure>
+    <figure class="card">
+        <img src="https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720" alt="">
+        <figcaption>nature</figcaption>
+    </figure>
+</section>
+
+<script src="js/dom.js"></script>
+</body>
+
+</html>
