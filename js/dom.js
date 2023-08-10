@@ -224,3 +224,58 @@ document.write("<h3>Meses del Año</h3>");
 $ul3.appendChild($fragment);
 document.body.appendChild($ul3); */
 
+// 69 Curso JavaScript: 69. DOM: Templates HTML - #jonmircha
+/*
+const $card = document.querySelector(".cards"),
+$template = document.getElementById("template-card").content,
+$fragment = document.createDocumentFragment(),
+cardsContent = [
+  {
+    title: "Tecnología",
+    img: "https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720",
+  },
+  {
+    title: "Animales",
+    img: "https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720",
+  },
+  {
+    title: "Arquitectura",
+    img: "https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720",
+  },
+  {
+    title: "Gente",
+    img: "https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720",
+  },
+  {
+    title: "Naturaleza",
+    img: "https://empresas.blogthinkbig.com/wp-content/uploads/2019/11/Imagen3-245003649.jpg?fit=960%2C720",
+  },
+];
+
+cardsContent.forEach((el)=>{
+  $template.querySelector("img").setAttribute("src", el.img);
+  $template.querySelector("img").setAttribute("alt", el.title);
+  $template.querySelector("figcaption").textContent = el.title;
+
+  let $clone = document.importNode($template,true);
+  $fragment.appendChild($clone);
+});
+
+$card.appendChild($fragment);
+*/
+
+/* **********     Curso JavaScript: 70. DOM: Modificando Elementos (Old Style) - #jonmircha     ********** */
+/* const $cards = document.querySelector(".cards"),
+  $newCard = document.createElement("figure"),
+  $cloneCards = $cards.cloneNode(true);
+
+$newCard.innerHTML = `
+  <img src="https://placeimg.com/200/200/any" alt="Any">
+  <figcaption>Any</figcaption>
+`;
+$newCard.classList.add("card");
+
+//$cards.replaceChild($newCard, $cards.children[2]);
+//$cards.removeChild($cards.lastElementChild);
+$cards.insertBefore($newCard, $cards.firstElementChild);
+document.body.appendChild($cloneCards); */
