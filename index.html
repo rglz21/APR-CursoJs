@@ -47,6 +47,24 @@
         filter: sepia(1);
     }
 
+    .eventos-flujo div{
+        padding:4rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .uno{
+        background-color: yellow;
+    }
+
+    .dos{
+        background-color: gold;
+    }
+
+    .tres{
+        background-color: lightyellow;
+    }
+
 </style>
 <body>
     <hr>
@@ -95,6 +113,26 @@
         <figcaption></figcaption>
     </figure>
 </template>
+<h3>Eventos en Javascripts</h3>
+<h4>Manejadores de eventos</h4>
+<button onclick="alert('Hola')">Eventos con tributos</button>
+<br>
+<br>
+<button id="evento-semantico">Evento con manejador semantico</button>
+<button id="evento-multiple">Evento con manejador Multiple</button>
+
+<section class="eventos-flujo">
+    <div class="uno">
+        1
+        <div class="dos">
+            2
+            <div class="tres">
+                3
+            </div>
+        </div>
+    </div>
+</section>
+
 <script src="js/dom.js"></script>
 </body>
 

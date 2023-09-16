@@ -279,3 +279,123 @@ $newCard.classList.add("card");
 //$cards.removeChild($cards.lastElementChild);
 $cards.insertBefore($newCard, $cards.firstElementChild);
 document.body.appendChild($cloneCards); */
+
+/* **********     Curso JavaScript: 71. DOM: Modificando Elementos (Cool Style) - #jonmircha     ********** */
+/*
+.insertAdjacent...
+  .insertAdjacentElement(position, el)
+  .insertAdjacentHTML(position, html)
+  .insertAdjacentText(position, text)
+
+Posiciones:
+  beforebegin(hermano anterior)
+  afterbegin(primer hijo)
+  beforeend(ultimo hijo)
+  afterend(hermano siguiente)
+*/
+/* const $cards = document.querySelector(".cards"),
+  $newCard = document.createElement("figure");
+
+let $contenCard = `
+  <img src="https://placeimg.com/200/200/any" alt="Any">
+  <figcaption></figcaption>
+`;
+$newCard.classList.add("card");
+
+$newCard.insertAdjacentHTML("afterbegin", $contenCard);
+$cards.insertAdjacentElement("beforeend", $newCard);
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any"); */
+//$cards.prepend($newCard);
+//$cards.append($newCard);
+//$cards.before($newCard);
+//$cards.after($newCard);
+
+/*
+function holaMundo() {
+  alert("Hola Mundo");
+  console.log(Event);
+}
+
+function saludar(nombre="Desconocido"){
+alert("Hola" + nombre);
+}
+
+const $eventoSemantico = document.getElementById("evento-semantico"),
+$eventoMultiple = document.getElementById("evento-multiple");
+
+$eventoSemantico.onclick = holaMundo;
+$eventoSemantico.onclick = function(e){
+  alert("Hola Mundo Manejador de eventos Semanticos");
+}
+
+$eventoMultiple.addEventListener("click",holaMundo);
+$eventoMultiple.addEventListener("click",(e)=>{
+  alert("Hola mundo manejador de eventos multiples");
+});
+$eventoMultiple.addEventListener("click",saludar);
+*/
+
+/* **********     Curso JavaScript: 72. DOM: Manejadores de Eventos - #jonmircha y Curso JavaScript: 73. DOM: Eventos con Parámetros y Remover Eventos - #jonmircha     ********** */
+/*
+Los eventos son los mecanismos que tenemos en JavaScript para controlar las acciones del usuario y definir el comportamiento del documento en cierto momento o cuando se cumplan ciertas condiciones.
+
+Las funciones que se ejecutan en un evento se llaman Event Handler (Manejador de Eventos).
+
+https://developer.mozilla.org/en-US/docs/Web/Events
+*/
+/* function holaMundo() {
+  alert("Hola Mundo");
+  console.log(event);
+}
+
+function saludar(nombre = "Desconocid@") {
+  alert(`Hola ${nombre}`);
+  console.log(event);
+}
+
+const $eventoSemantico = document.getElementById("evento-semantico"),
+  $eventoMultiple = document.getElementById("evento-multiple"),
+  $eventoRemover = document.getElementById("evento-remover");
+
+$eventoSemantico.onclick = holaMundo;
+$eventoSemantico.onclick = function (e) {
+  alert("Hola Mundo Manejador de Eventos Semántico");
+  console.log(e);
+  console.log(event);
+};
+
+$eventoMultiple.addEventListener("click", holaMundo);
+$eventoMultiple.addEventListener("click", (e) => {
+  alert("Hola Mundo Manejador de Eventos Múltiple");
+  console.log(e);
+  console.log(e.type);
+  console.log(e.target);
+  console.log(event);
+});
+$eventoMultiple.addEventListener("click", () => {
+  saludar();
+  saludar("Jon");
+});
+
+const removerDobleClick = (e) => {
+  alert(`Removiendo el evento de tipo ${e.type}`);
+  console.log(e);
+  $eventoRemover.removeEventListener("dblclick", removerDobleClick);
+  $eventoRemover.disabled = true;
+};
+
+$eventoRemover.addEventListener("dblclick", removerDobleClick); */
+
+const $divEventos= document.querySelectorAll(".eventos-flujo div");
+
+function flujoEventos(e){
+  console.log("Hola te salida " + this.className + " El click lo origino "+e.target.className);
+}
+
+$divEventos.forEach( div => {
+  //fase de burbuja
+  //div.addEventListener("click",flujoEventos);
+  //fase de captura
+  div.addEventListener("click",flujoEventos,true);
+
+})
