@@ -6,6 +6,21 @@
 .color5 { #f8be00 } amarillo;
 */
 
+.container{
+  background: #02483e;
+  background: -webkit-linear-gradient(to right, #02483e,#f8be00 );
+  background: linear-gradient(to right, #02483e,#f8be00);
+  height: 100%;
+}
+
+.content{
+  max-width: 960px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
 td{
     border: solid 1px;
 }
