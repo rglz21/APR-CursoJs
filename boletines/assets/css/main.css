@@ -6,21 +6,147 @@
 .color5 { #f8be00 } amarillo;
 */
 
+html{
+  font-family: 'Nunito', sans-serif;
+}
 .container{
   background: #02483e;
   background: -webkit-linear-gradient(to right, #02483e,#f8be00 );
   background: linear-gradient(to right, #02483e,#f8be00);
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content{
   max-width: 960px;
   max-height: 500px;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   background-color: #fff;
+  border-radius: 1%;
+  box-shadow: 0 3px 6px 10px #000;
+  position: relative;
+  padding: 1.8em;
+  overflow: scroll;
+}
+.actions{
+  position:absolute;
+  top:1em;
+  right:1em;
+}
+
+.close{
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius:50%;
+  background-color:#02483e;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16) rgba(0,0,0,0.23);
+  font-weight: 300;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+td{
+    border: solid 1px;
+}
+.titulo{
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.paragraph{
+  line-height: 1.8em;
+  font-weight: 300;
+}
+
+a{
+text-decoration: none;
+color: green;
+font-weight: 600;
+}
+
+img{
+  max-width: 100%;
+}
+a:hover{
+  opacity: 0.8;
+}
+
+.tabla{
+  width: 100%;
+  border-spacing:0 ;
+}
+
+.tabla td, .table th{
+  padding: 1em;
+  text-align:left;
+}
+
+/* even impar y odd pares*/
+
+.tabla tr:nth-child(even){
+background-color: #f8be00;
 }
 
 td{
-    border: solid 1px;
+  border: 0;
+}
+
+.title-items{
+ /* border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #9bb61b;*/
+  border-bottom: solid 2px #9bb61b;
+  padding-bottom: 1em;
+}
+
+.address{
+  font-weight: bold;
+  color:#9bb61b; 
+  margin-top: 2em;
+  display: inline-block;
+}
+
+.position{
+ background-color: #02483e;
+ color: white;
+ padding: 0.5em;
+ border-radius: 4px;
+ margin-right: 0.5em;
+
+}
+
+.main-image{
+  float: left;
+  margin-right: 1em;
+  height: 250px;
+}
+
+@media (max-width:600px){
+  .content{
+    padding: 1em;
+  }
+  td{
+    display: block;
+    width: 100%;
+  }
+  td:nth-of-type(1){
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  th{
+    display: none;
+  }
+
+}
+
+@media (min-height:550px){
+  .content{
+    height: 500px;
+  }
 }
